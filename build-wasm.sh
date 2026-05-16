@@ -9,7 +9,7 @@ mkdir -p .bin/ 2>/dev/null
 
 # Setup tinygo first
 if [[ ! -d .bin/tinygo ]]; then
-  git clone --depth=1 --branch v0.38.0 https://github.com/tinygo-org/tinygo.git .bin/tinygo
+  git clone --depth=1 --branch v0.41.1 https://github.com/tinygo-org/tinygo.git .bin/tinygo
   pushd .bin/tinygo
   git submodule update --init --recursive
 
