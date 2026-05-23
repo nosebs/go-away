@@ -30,6 +30,7 @@ ENV BUILDMODE=pie
 # see https://github.com/golang/go/issues/64875
 RUN if [[ "$GOARCH" == "riscv64" ]]; then export BUILDMODE=exe; fi && \
     go build -v \
+    -buildvcs=false \
     -pgo=auto \
     -trimpath -ldflags='-buildid= -bindnow' -buildmode $BUILDMODE \
     -o "${GOBIN}/go-away" ./cmd/go-away
